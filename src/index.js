@@ -84,7 +84,6 @@ class Geocoder extends Component {
 
         return (
             <div className={`react-geocoder ${className}`}>
-                <Input onChange={this.onChange} onBlur={this.hideResults} onFocus={this.showResults}/>
 
                 {showResults && !!results.length &&
                 <div className='react-geocoder-results'>
@@ -97,6 +96,9 @@ class Geocoder extends Component {
                         </Item>
                     ))}
                 </div>}
+
+                <Input onChange={this.onChange} onBlur={this.hideResults} onFocus={this.showResults}/>
+
             </div>
         );
     }
